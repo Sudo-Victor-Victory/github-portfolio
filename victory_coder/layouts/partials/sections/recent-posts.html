@@ -1,0 +1,7 @@
+{{ with (.Site.RegularPages | where "Type" "posts") }}
+  {{ range first 5 . }}
+    <li>
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </li>
+  {{ end }}
+{{ end }}

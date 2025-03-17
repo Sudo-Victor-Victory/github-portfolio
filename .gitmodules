@@ -1,0 +1,7 @@
+[submodule "public"]
+	path = public
+	url = https://github.com/Sudo-Victor-Victory/victory_coder.github.io.git
+	branch = main
+[submodule "victory_coder.github.io"]
+	path = victory_coder.github.io
+	url = https://github.com/Sudo-Victor-Victory/victory_coder.github.io.git
