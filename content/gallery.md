@@ -5,8 +5,8 @@ draft: false
 description: "My gallery 🌎"
 layout: "gallery"
 galleryImages:
- - src: /gallery_images/Player_Movement_State_Machine_Flowchart-1.png
- - src: /gallery_images/Nano.png
+ - src: ../gallery_images/Player_Movement_State_Machine_Flowchart-1.png
+ - src: ../gallery_images/Nano.png
 viewer : true
 viewerOptions : {
     title: true

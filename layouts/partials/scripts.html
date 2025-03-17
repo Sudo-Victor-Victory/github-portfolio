@@ -50,7 +50,8 @@
 {{- end }}
 
 {{ if not (.Site.Params.navbar.disableSearch | default false) }}
-    <script src="js/search.js"></script>
+<link rel="stylesheet" href="{{ `css/list.css` | relURL}}" media="all">
+    <script src="{{ `js/search.js` | relURL}}"></script>
 {{ end }}
 
 

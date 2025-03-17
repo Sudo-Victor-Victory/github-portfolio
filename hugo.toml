@@ -74,7 +74,7 @@ animate = true
     [params.hero.button]
     enable = true
     name = "Resume"
-    url = "images/Victor_Resume_John_Deer.pdf"
+    url = "docs/Victor_Resume_John_Deer.pdf"
     download = true
     newPage = true
 
@@ -230,13 +230,13 @@ Extracurricular Activities
 
     [[params.projects.items]]
     title = "Windows XP Pipe Screensaver Recreation"
-    content = "A clean and simple Hugo template for personal portfolio and blog."
+    content = "A Unity Simulation that aims to recreate the Windows XP Pipe Screensaver - where you can make pipes be any object."
     image = "projects/screen_saver.gif"
     badges = [ "Unity", "C#", "Graphics Programming"]
 
       [params.projects.items.featured]
       name = "Demo"
-      link = "https://github.com/Victor-Rodriguez-VR/Windows-XP-pipe-recreationp"
+      link = "https://github.com/Victor-Rodriguez-VR/Windows-XP-pipe-recreation"
 
       [[params.projects.items.links]]
       icon = "fab fa-github"
