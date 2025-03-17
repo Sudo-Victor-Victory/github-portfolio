@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Victor&#39;s silly portfolio website</title>
-    <link>http://localhost:1313/</link>
+    <link>http://localhost:1313/github-portfolio/</link>
     <description>Recent content on Victor&#39;s silly portfolio website</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 13 Mar 2025 14:32:22 -0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/github-portfolio/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My First Post</title>
-      <link>http://localhost:1313/blogs/my_first_post/</link>
+      <link>http://localhost:1313/github-portfolio/blogs/my_first_post/</link>
       <pubDate>Thu, 13 Mar 2025 14:32:22 -0700</pubDate>
-      <guid>http://localhost:1313/blogs/my_first_post/</guid>
+      <guid>http://localhost:1313/github-portfolio/blogs/my_first_post/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Making this website was an experience. Having never used Bootstrap, or Hugo, it was &lt;strong&gt;exciting&lt;/strong&gt; to get all of this working. There were some parts that were frustrating, some parts fascinating, and the end result is amazing. Here&amp;rsquo;s a bit of reflection, and advice on how to make your own website using Hugo too.&lt;/p&gt;&#xA;&lt;h2 id=&#34;here-is-what-i-learned&#34;&gt;Here is what I learned.&lt;/h2&gt;&#xA;&lt;html&gt;&#xD;&#xA;&lt;head&gt;&#xD;&#xA;&lt;style&gt;&#xD;&#xA;.red-list {&#xD;&#xA;    color:  #ee1c1c;      /* Change text color to red */&#xD;&#xA;    font-size: 18px; /* Change text size */&#xD;&#xA;    margin: 0;       /* Remove default margin */&#xD;&#xA;    padding: 0;      /* Remove default padding */&#xD;&#xA;}&#xD;&#xA;.green-list {&#xD;&#xA;    color:     #10d500&#xD;&#xA; ;      /* Change text color */&#xD;&#xA;    font-size: 18px; /* Change text size */&#xD;&#xA;    margin: 0;       /* Remove default margin for nested lists */&#xD;&#xA;    padding-left: 20px; /* Add some indentation for nested lists */&#xD;&#xA;}&#xD;&#xA;&lt;p&gt;&lt;/style&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Image Gallery</title>
-      <link>http://localhost:1313/gallery/</link>
+      <link>http://localhost:1313/github-portfolio/gallery/</link>
       <pubDate>Sat, 25 Jun 2022 18:35:46 +0530</pubDate>
-      <guid>http://localhost:1313/gallery/</guid>
+      <guid>http://localhost:1313/github-portfolio/gallery/</guid>
       <description></description>
     </item>
   </channel>
