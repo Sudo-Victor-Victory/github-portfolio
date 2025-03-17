@@ -61,6 +61,7 @@ jobs:
           key: hugo
       - name: Build with Hugo
         run: |
+          cd victory_coder/
           hugo \
             --gc \
             --minify \
