@@ -31,7 +31,7 @@ weight = 2
 [params]
 title = "Victor's Profile"
 description = "Text about my cool site"
-favicon = "/fav.png"
+favicon = "fav.png"
 useBootstrapCDN = false
 mathjax = false
 animate = true
@@ -66,7 +66,7 @@ animate = true
   title = "Victor Rodriguez."
   subtitle = " Your Solution Engineer."
   content = "I'm a passionate Software Engineer specializing in Security Solutions, Embedded Programming, and game development. Let's create something amazing together!"
-  image = "/images/Me_At_Lb.jpg"
+  image = "images/Me_At_Lb.jpg"
 
     [params.hero.bottomImage]
     enable = true
@@ -74,7 +74,7 @@ animate = true
     [params.hero.button]
     enable = true
     name = "Resume"
-    url = "/images/Victor_Resume_John_Deer.pdf"
+    url = "images/Victor_Resume_John_Deer.pdf"
     download = true
     newPage = true
 
@@ -88,7 +88,7 @@ url  = "https://www.linkedin.com/in/victor-rodriguez-vr/"
   [params.about]
   enable = true
   title = "About Me"
-  image = "/images/Nice_image.png"
+  image = "images/Nice_image.png"
   content = """
 I am a dedicated Software Engineer with a passion for helping others through technology. With a Bachelor of Science in Computer Science, I explore the fascinating intersection of technology and art. Currently, I'm working on various exciting projects while seeking new job opportunities. Here are some of the technologies I've recently been working with:"""
 
@@ -105,7 +105,7 @@ I am a dedicated Software Engineer with a passion for helping others through tec
     company = "Bloomberg"
     companyUrl = "https://www.bloomberg.com/"
     date = "July 2022 - Feb 2024"
-    img = "/images/images.png"
+    img = "images/images.png"
     content = """
 I built a Software Security Platform focused on keeping company secrets safe, alongside building code libraries for other security tools.
 
@@ -127,7 +127,7 @@ I built a Software Security Platform focused on keeping company secrets safe, al
     company = "BNY Mellon"
     companyUrl = "https://www.bny.com/corporate/global/en.html"
     date = "Jun 2021 - Aug 2021"
-    img = "/images/Bank-of-New-York-Mellon-Emblem.png"
+    img = "images/Bank-of-New-York-Mellon-Emblem.png"
     content = """
 As a full stack intern - I created an internal website for Risk Administrators to more easily track, report, and migitate risks towards the company.
 
@@ -148,7 +148,7 @@ As a full stack intern - I created an internal website for Risk Administrators t
     company = "College of Engineering CSULB"
     companyUrl = "https://www.csulb.edu/college-of-engineering"
     date = "June 2017 - Nov 2019"
-    img = "/images/Csulb_seal.JPG"
+    img = "images/Csulb_seal.JPG"
     content = """
 Aided HSI students have a successful career in  STEM by building their mentorship, academic, and leadership success skills.
 - Mentored a group of 5-9 freshmen students Academic Excellence and Successful Leadership inn STEM
@@ -170,7 +170,7 @@ Aided HSI students have a successful career in  STEM by building their mentorshi
     title = "Bachelor of Science in Computer Science"
     date = "2018 - 2022"
     GPA = "3.5 out of 4.0"
-    img = "/images/Csulb_seal.JPG"
+    img = "images/Csulb_seal.JPG"
     content = """
 Extracurricular Activities
   - SHPE Academic Chair 2021 - 2022.
@@ -189,7 +189,7 @@ Extracurricular Activities
     title = "Google kickstart runner"
     content = "I solved all problems with optimal solution."
     url = "https://example.com"
-    image = "/images/achievement.jpg"
+    image = "images/achievement.jpg"
 
 
 
@@ -199,7 +199,7 @@ Extracurricular Activities
     [[params.projects.items]]
     title = "Untitlted Roguelike"
     content = "A 3rd person cooperative Roguelike game where each character has unique abilities Made in GODOT."
-    image = "/projects/Untilted.png"
+    image = "projects/Untilted.png"
     badges = [ "Godot", "Game Programming", "GDScript" ]
 
       [params.projects.items.featured]
@@ -217,7 +217,7 @@ Extracurricular Activities
     [[params.projects.items]]
     title = "Arduino Learning"
     content = "My progress towards learning embedded programming to build silly little products. Links coming soon!"
-    image = "/projects/20250311_143211.gif"
+    image = "projects/20250311_143211.gif"
     badges = [ "C", "Embedded Programming", "Circuit Design" ]
 
       #[params.projects.items.featured]
@@ -231,7 +231,7 @@ Extracurricular Activities
     [[params.projects.items]]
     title = "Windows XP Pipe Screensaver Recreation"
     content = "A clean and simple Hugo template for personal portfolio and blog."
-    image = "/projects/screen_saver.gif"
+    image = "projects/screen_saver.gif"
     badges = [ "Unity", "C#", "Graphics Programming"]
 
       [params.projects.items.featured]
