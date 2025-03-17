@@ -1,4 +1,4 @@
-baseURL = 'https://Sudo-Victor-Victory.github.io/github-portfolio/'
+baseURL = 'https://sudo-victor-victory.github.io/'
 languageCode = 'en-us'
 title = "Victor's silly portfolio website"
 theme='hugo-profile'
