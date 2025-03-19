@@ -30,7 +30,7 @@ weight = 2
 
 [params]
 title = "Victor's Profile"
-description = "Text about my cool site"
+description = "Learn about my & my silly website"
 favicon = "fav.png"
 useBootstrapCDN = false
 mathjax = false
@@ -74,7 +74,7 @@ animate = true
     [params.hero.button]
     enable = true
     name = "Resume"
-    url = "docs/Victor_Resume_John_Deer.pdf"
+    url = "docs/Victor_Resume.pdf"
     download = true
     newPage = true
 
@@ -90,7 +90,7 @@ url  = "https://www.linkedin.com/in/victor-rodriguez-vr/"
   title = "About Me"
   image = "images/Nice_image.png"
   content = """
-I am a dedicated Software Engineer with a passion for helping others through technology. With a Bachelor of Science in Computer Science, I explore the fascinating intersection of technology and art. Currently, I'm working on various exciting projects while seeking new job opportunities. Here are some of the technologies I've recently been working with:"""
+I am a dedicated Software Engineer with a passion for helping others through technology. With a Bachelor of Science in Computer Science, I explore the fascinating intersection of technology and art. Currently, I'm working on various exciting projects while seeking new job opportunities."""
 
     [params.about.skills]
     enable = true
@@ -197,7 +197,7 @@ Extracurricular Activities
   enable = true
 
     [[params.projects.items]]
-    title = "Untitlted Roguelike"
+    title = "Untitled Roguelike"
     content = "A 3rd person cooperative Roguelike game where each character has unique abilities Made in GODOT."
     image = "projects/Untilted.png"
     badges = [ "Godot", "Game Programming", "GDScript" ]
