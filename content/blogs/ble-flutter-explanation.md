@@ -20,19 +20,6 @@ However, I will go more in detail here and provide some important background.
 <html>
 <head>
 <style>
-.red-list {
-    color:  #ee1c1c;      /* Change text color to red */
-    font-size: 18px; /* Change text size */
-    margin: 0;       /* Remove default margin */
-    padding: 0;      /* Remove default padding */
-}
-.green-list {
-    color:     #10d500
- ;      /* Change text color */
-    font-size: 18px; /* Change text size */
-    margin: 0;       /* Remove default margin for nested lists */
-    padding-left: 20px; /* Add some indentation for nested lists */
-}
 .blue-list {
     color:     #0096FF
  ;      /* Change text color */
