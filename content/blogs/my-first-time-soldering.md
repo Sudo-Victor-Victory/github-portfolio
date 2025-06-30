@@ -26,13 +26,6 @@ I have never soldered before. For an upcoming project (see the end of the blog f
       padding: 2px 4px;
       border-radius: 4px;
     }
-        .yellow-highlight {
-      background-color: #FFDB58; /* MUSTAARRDDD Yellow */
-      color: black;
-      font-weight: bold;
-      padding: 2px 4px;
-      border-radius: 4px;
-    }
      </style>
   </head>
 </html>
@@ -89,13 +82,13 @@ Easy.
 11. Maybe wait a minute or two before touching since your PCB / combined component may be a little hot as a result.
 12. Remove excess flux with isopropyl alcohol and either a brush or a paper towel. 
 
-## It's not *That* easy, right?
+## It's not <span style="color: #fbc02d ">*That*</span> easy, right?
 Welllll, yeah. There are a few things to be aware of.
 1. It <mark>will</mark> be an iterative process. 
 2. Make sure the solder you applied resembles volcanoes. With a thicker base near the bottom and a thinner base the near the top.
     1. Don't worry if you applied too much solder - you can always apply more flux on the area with too much solder and you can hold your solder iron there to melt away the excess solder.
 3. Avoid having 2 pins be connected by the solder. This is a really fast way to short-circuit your component. Refer to the previous list entry.
-    4. If two pins are connected with solder, you can apply more flux in between both pins and 
+    4. If two pins are connected with solder, you can apply more flux in between both pins melting away the solder until there is no connection, and quickly moving your iron up to prevent another one from forming.
 5. Test the component
     1. Once the solder is on it can be used/tested immediately if the board isn't hot.
     2. Test incrementally. Here's my protocol
@@ -125,6 +118,8 @@ Here's what my soldering resulted in
     </a>
   </div>
 </div>
+It'd have been nice to have more pictures of the process, but my hands were occupied. 
+<br/><br/>
 
 ## What's next?
 The eagle-eyed viewers see the heart icon on the chip I soldered. It's specifically a <mark>Sparkfun ad8232</mark> used to create ECGs. I am planning on turning this into a full-fledged circuit and evolve it into a real-time mobile app. Now you see why the last post was BLE, huh. 😼
