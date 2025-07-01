@@ -31,7 +31,7 @@ I have never soldered before. For an upcoming project (see the end of the blog f
 </html>
 
 
-- <span class="yellow-highlight">**Freedom**</span> - You will be freely able to incorporate electrical components in future projects without relying on the OEM attaching electircal connectors. Sometimes, you don't have a choice and the OEM doesn't include *any* electircal connectors - in which case soldering is often the best (though not the only) option.
+- <span class="yellow-highlight">**Freedom**</span> - You will be freely able to incorporate electrical components in future projects without relying on the OEM attaching electrical connectors. Sometimes, you don't have a choice and the OEM doesn't include *any* electrical connectors - in which case soldering is often the best (though not the only) option.
 - <span class="yellow-highlight">**Repairs**</span>  - If a wire or an electrical component breaks, having the ability to fix it asap and not re-buy expensive components, or wait until a component arrives, makes you much more agile and self-sufficient.
 - <span class="yellow-highlight">**It's fun!**</span>   - Completing a successful solder makes you feel awesome!
 
@@ -99,25 +99,57 @@ Welllll, yeah. There are a few things to be aware of.
 6. Clean up any excess solder/flux with alcohol and you're done.
 7. BOOM! You REALLY completed it. Good job.
 
+## Extremely useful videos
+Videos should always supplement text-heavy blogs. Here's a few that helped me
+
+<div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+  <div style="flex: 1 1 45%;">
+    {{< youtube Qps9woUGkvI >}}
+  </div>
+  <div style="flex: 1 1 45%;">
+    {{< youtube PIP_RlS3G_w >}}
+  </div>
+</div>
+</br>
+
 ## My work
-Here's what my soldering resulted in
+Here's what my soldering resulted in.
 
 
-<div style="display: flex; gap: 20px; justify-content: center;">
-  <div style="text-align: center;">
-    <a href="/github-portfolio/images/Me_With_My_Solder.webp">
-      <img src="/github-portfolio/images/Me_With_My_Solder.webp" alt="Me with my solder" style="width: 100%; border-radius: 8px;">
+<div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
+  <div style="text-align: center; flex: 1 1 300px; max-width: 300px;">
+    <a href="/github-portfolio/images/My_Solder_Station.jpg">
+      <img src="/github-portfolio/images/My_Solder_Station.jpg" alt="My solder job" style="width: 100%; border-radius: 8px;">
+      <p style="font-size: 14px;">My solder station</p>
+    </a>
+  </div>
+
+  <div style="text-align: center; flex: 1 1 300px; max-width: 300px;">
+    <a href="/github-portfolio/images/Alt_Solder_angle.jpg">
+      <img src="/github-portfolio/images/Alt_Solder_angle.jpg" alt="Alt solder angle" style="width: 100%; border-radius: 8px;">
+      <p style="font-size: 14px;">Alternate angle with pin headers</p>
+    </a>
+  </div>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
+  <div style="text-align: center; flex: 1 1 300px; max-width: 300px;">
+    <a href="/github-portfolio/images/Me_With_My_Solder.jpg">
+      <img src="/github-portfolio/images/Me_With_My_Solder.jpg" alt="Me with my solder" style="width: 100%; border-radius: 8px;">
       <p style="font-size: 14px;">Me with my soldered board</p>
     </a>
   </div>
 
-  <div style="text-align: center;">
-    <a href="/github-portfolio/images/My_Solder_Job.webp">
-      <img src="/github-portfolio/images/My_Solder_Job.webp" alt="Second Image" style="width: 100%; border-radius: 8px;">
+  <div style="text-align: center; flex: 1 1 300px; max-width: 300px;">
+    <a href="/github-portfolio/images/My_Solder_Job.jpg">
+      <img src="/github-portfolio/images/My_Solder_Job.jpg" alt="My solder job" style="width: 100%; border-radius: 8px;">
       <p style="font-size: 14px;">My solder job</p>
     </a>
   </div>
 </div>
+
+
+
 It'd have been nice to have more pictures of the process, but my hands were occupied. 
 <br/><br/>
 
