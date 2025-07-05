@@ -83,7 +83,7 @@ I'm going to save some information for an upcoming blog post relating to my over
 <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
     <div style="text-align: center; max-width: 90%;">
       <a href="https://github.com/Sudo-Victor-Victory/ESP32-ECG/blob/main/ESP_ECG.pdf">
-      <img src="/github-portfolio/images/SparkFun_AD8232_ESP32_Circuit_Design.png" alt="My solder job" style="width: 100%; border-radius: 8px;">
+      <img src="/github-portfolio/images/SparkFun_AD8232_ESP32_Circuit_Design.png" alt="Component diagram showing what GPIO pins connect to what SparkFun AD8232 pins" style="width: 100%; border-radius: 8px;">
       <p style="font-size: 14px;">My Circuit design for the ESP32 + SparkFun AD8232. Tap on the img to go to my github for the full pdf + KiCad project files.</p>
       </a>
     </div>
@@ -92,14 +92,14 @@ I'm going to save some information for an upcoming blog post relating to my over
 </br>
 <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
   <div style="text-align: center; flex: 1 1 300px; max-width: 60%;">
-      <a href="/github-portfolio/images/My_Solder_job.jpg">
-      <img src="/github-portfolio/images/My_Solder_job.jpg" alt="My solder job" style="width: 100%; border-radius: 8px;">
+      <a href="/github-portfolio/images/My_Solder_Job.jpg">
+      <img src="/github-portfolio/images/My_Solder_Job.jpg" alt="Showing the physical connection between the ESP32 and SparkFun AD8232 directly" style="width: 100%; border-radius: 8px;">
       <p style="font-size: 14px;">Asserting that the SparkFun AD8232 can be hooked up to the ESP32 directly.</p>
       </a>
     </div>
     <div style="text-align: center; flex: 1 1 300px; max-width: 46%;">
       <a href="/github-portfolio/images/Sparkfun_Electrode_hookups.png">
-      <img src="/github-portfolio/images/Sparkfun_Electrode_hookups.png" alt="My solder job" style="width: 100%; border-radius: 8px;">
+      <img src="/github-portfolio/images/Sparkfun_Electrode_hookups.png" alt="Recommended electrode placement from the SparkFun website." style="width: 100%; border-radius: 8px;">
       <p style="font-size: 14px;">Recommended electrode placements on the body. In my opinion the right's electrode placements produce more accurate results. </p>
       </a>
     </div>
