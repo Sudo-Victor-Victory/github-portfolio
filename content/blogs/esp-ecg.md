@@ -54,7 +54,6 @@ The cause of the BEEP and the doctors rushing in is due to the ECG machine monit
 
 It stemmed from noticing family members lacking an ECG, being interested within the biomedical engineering realm ever since I used a Event monitor (Holter) myself, and having a genuine interest about learning the heart's biomechanics after learning about it from a fellow COE EXCEL Peer Mentor in undergrad.
 
-da0c35
 ## <span style="color: #f33e62 ">How'd  you do it?</span> 
 
 I'm going to save some information for an upcoming blog post relating to my overall journey on embedded programming, but this is how it went down.
@@ -106,9 +105,8 @@ I'm going to save some information for an upcoming blog post relating to my over
     </div>
 </div>
 
+## <span style="color: #003bf7 ">Results</span> 
 
-
-## Results
 <div style="text-align: center;">
   <video style="max-width: 100%; " controls>
     <source src="/github-portfolio/images/ECG_SerialPlotter_Recording.mp4" type="video/mp4">
@@ -133,7 +131,8 @@ Overall, the results look *alright*. </br> Here's an annotated ECG taken from 33
     </div>
 </div>
 
-## Analysis and remediation
+## <span style="color: #003bf7 ">Analysis and remediation</span> 
+
 My annotated ECG does indeed resemble the example ECG. However, there's a few critiques that need to be pointed out in this annotation and the overall ECG.
 - PR segment is rather small; U wave is *veerrryyyy* small. This tells me the recordings are lower in resolution than in clinical use boards.
 - I had to stay very still to get accurate recordings.
@@ -146,7 +145,7 @@ My annotated ECG does indeed resemble the example ECG. However, there's a few cr
 - PR Segment appears short. It could stem from sampling rate issues or a fast heart rate. I believe my heart rate was around 70 BPM at time of recording, so this further implies that the sampling rate should be investigated. 
 -  The serial plotter in Arduino's IDE constantly changes its Y-axis scale to keep all the data in frame. This makes it difficult to compare waves as the left side of the monitor's graph becomes distorted to accomodate the peak of the next QRS complex.
 
-## Reflection
+## <span style="color: #f33e62 ">Reflection</span> 
 Overall, I'm very pleased with these results. Two weeks ago I had no clue if I could even get any of this done. Since then I've research electrical components, learned to solder, and  created code to monitor & display an actual ECG waveform. There is work to be done in refining these voltages possibly through DSP to make them more accurate and reliable. That'll be an upcoming post I'm sure.
 
 ## Thank you
