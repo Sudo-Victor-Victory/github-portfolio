@@ -79,7 +79,7 @@ I'm going to save some information for an upcoming blog post relating to my over
 4. I chose the SparkFun AD8232 for its simplicity in connecting to the ESP32, being an excellent entrypoint into DSP, being attainable & affordable, only requiring soldering, and still providing some ECG data to be analyzed and sent through BLE into a mobile app. In the future I would *LOVE* to attempt building a module out of the MAX30003 and making a custom PCB for it.
 5. Unexpected setback - soldering.
     - Having limited experince in circuit building I had not noticed at the time that the chip I selected did not have any pins attached. I described my process of soldering some male pin headers onto the chip in a [previous blog post](/github-portfolio/blogs/my-first-time-soldering/).
-6. Hookup!
+6. **Hookup!**
 <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
     <div style="text-align: center; max-width: 90%;">
       <a href="https://github.com/Sudo-Victor-Victory/ESP32-ECG/blob/main/ESP_ECG.pdf">

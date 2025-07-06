@@ -146,6 +146,116 @@
   }
 </script>
 
+<script>
+    // Executes highlighting after the blog's HTML has been loaded.
+    document.addEventListener("DOMContentLoaded", () => {
+    const html = document.body;
+
+    const highlights = [{
+            word: "ESP32",
+            className: "esp32-red-highlight"
+        },
+        {
+            word: "Arduino",
+            className: "arduino-blue-highlight"
+        },
+        {
+            word: "ECG",
+            className: "ecg-gold-highlight"
+        },
+        {
+            word: "SparkFun AD8232",
+            className: "ad8232-red-highlight"
+        },
+
+    ];
+
+    // Transforms the highlights array into an array of objects containing regex, word, and className.
+    const regexes = highlights.map(({
+        word,
+        className
+    }) => ({
+      // \\b is used for whole words, gi is a global search and ignores casing
+        regex: new RegExp(`\\b${word}\\b`, "gi"),
+        word,
+        className
+    }));
+
+    // Checks if a node has a parent that is a paragraph and is within a link that has an image
+    // If it is - it returns true.
+    function shouldSkip(node) {
+        let p = node.closest?.("p");
+        let a = p?.closest?.("a");
+        // Returns a null-safe bool based on if a caption or link text is nested in an image
+        // if it is near an image it will return true.
+        return !!(p && a && a.querySelector("img"));
+    }
+
+    // Iterates through a node to find occurances of words that needs to be highlighted and highlights.
+    function highlightTextNode(textNode) {
+        let text = textNode.nodeValue;
+        const parent = textNode.parentNode;
+        let matched = false;
+
+        // Creates a container of DOM nodes.
+        const textFragment = document.createDocumentFragment();
+
+        while (text.length > 0) {
+            let found = false;
+            for (let { regex, className} of regexes) {
+                // Searches for text within regex
+                const match = regex.exec(text);
+                if (match) {
+                    matched = true;
+                    const before = text.slice(0, match.index);
+                    const matchedText = match[0];
+                    // Remove the word to append the styled word.
+                    text = text.slice(match.index + matchedText.length);
+
+                    if (before) {
+                      textFragment.appendChild(document.createTextNode(before));
+                    }
+                    // Adds a span to the fragment with the className defined in single.css
+                    const span = document.createElement("span");
+                    span.className = className;
+                    span.textContent = matchedText;
+                    textFragment.appendChild(span);
+
+                    found = true;
+                    break;
+                }
+            }
+            // If no other matches are found, adds the text back to the fragment and exits the loop. 
+            if (!found) {
+                textFragment.appendChild(document.createTextNode(text));
+                break;
+            }
+        }
+        // If a word was found, replaces the old textNode with the stylized fragment node we just created
+        if (matched) {
+            parent.replaceChild(textFragment, textNode);
+        }
+    }
+
+    // Recursively check if a node is a textNode and if its parent should be skipped due to being nested within a link
+    function walk(node) {
+        // 3 is a DOM specified that indicates a text node
+        if (node.nodeType === 3 && node.nodeValue.trim() && !shouldSkip(node.parentNode)) {
+            highlightTextNode(node);
+        }
+        // 1 is a DOM specified val of an element node . Think of any HTML elements like <p> <div> <h1> <a> <img>
+        // We want to recursively check nodes that are not SCRIPT, STYLE, and NOSCRIPT
+        else if (node.nodeType === 1 && !["SCRIPT", "STYLE", "NOSCRIPT"].includes(node.tagName)) {
+            for (let i = 0; i < node.childNodes.length; i++) {
+                walk(node.childNodes[i]);
+            }
+        }
+    }
+    // Kicks off the recursive call
+    walk(html);
+});
+</script>
+
 {{ if or (.Site.Params.singlePages.readTime.enable | default true) (.Params.enableReadingTime) }}
 <script src="{{ `js/readingTime.js` | relURL}}"></script>
 {{end}}
