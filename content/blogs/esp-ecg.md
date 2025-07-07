@@ -7,7 +7,7 @@ author = 'Victor Rodriguez'
 image = '/github-portfolio/images/esp_ecg_blog/Patient.webp'
 +++
 
-## <span style="color:#4682B4">You created an ECG???? What is that?</span>
+## <span style="color:#4682B4">You created an <span class="ecg-gold-highlight"> ECG</span>????  What is that?</span>
 
 
 You may not know what an ECG but you have guaranteed seen one.
@@ -54,7 +54,7 @@ The cause of the BEEP and the doctors rushing in is due to the ECG machine monit
 
 It stemmed from noticing family members lacking an ECG, being interested within the biomedical engineering realm ever since I used a Event monitor (Holter) myself, and having a genuine interest about learning the heart's biomechanics after learning about it from a fellow COE EXCEL Peer Mentor in undergrad.
 
-## <span style="color: #f33e62 ">How'd  you do it?</span> 
+## <span style="color: #f33e62 ">How'd  you do it? (Methodology)</span> 
 
 I'm going to save some information for an upcoming blog post relating to my overall journey on embedded programming, but this is how it went down.
 
@@ -134,16 +134,17 @@ Overall, the results look *alright*. </br> Here's an annotated ECG taken from 33
 ## <span style="color: #003bf7 ">Analysis and remediation</span> 
 
 My annotated ECG does indeed resemble the example ECG. However, there's a few critiques that need to be pointed out in this annotation and the overall ECG.
-- PR segment is rather small; U wave is *veerrryyyy* small. This tells me the recordings are lower in resolution than in clinical use boards.
+- <span style="color: #ff914d">PR segment</span>  is rather small; <span style="color: #cc99ff">U wave</span>  is *veerrryyyy* small. This tells me the recordings are lower in resolution than in clinical use boards.
 - I had to stay very still to get accurate recordings.
   - Noise caused by movement are called 'motion artifacts'. Essentially movement causes the electrodes to display innacurate signals.
   - Leaving motion artifacts in allows for misinterpretation of a patient’s condition — potentially leading to severe consequences if not addressed.
   - This indicates that extra filtering and processing is required to help remediate artifact detection.
 -  If the sampling rate is too low or inconsistent, it can distort waveform shape. I would like to test more sampling rates to find the one that produces the best results.
-- The QRS complex looks fantastic here. Although due to noise sometimes the two voltage drops within it are absent or not as pronounced.
-- T wave looks beautiful.
-- PR Segment appears short. It could stem from sampling rate issues or a fast heart rate. I believe my heart rate was around 70 BPM at time of recording, so this further implies that the sampling rate should be investigated. 
--  The serial plotter in Arduino's IDE constantly changes its Y-axis scale to keep all the data in frame. This makes it difficult to compare waves as the left side of the monitor's graph becomes distorted to accomodate the peak of the next QRS complex.
+- The <span style="color: #c7a728">QRS complex</span> looks fantastic here. Although due to noise sometimes the two voltage drops within it are absent or not as pronounced.
+- <span style="color: #35abef">T wave</span> looks beautiful.
+- <span style="color: #ff914d">PR segment</span> appears short. It could stem from sampling rate issues or a fast heart rate. I believe my heart rate was around 70 BPM at time of recording, so this further implies that the sampling rate should be investigated. 
+-  The serial plotter in Arduino's IDE constantly changes its Y-axis scale to keep all the data in frame. This makes it difficult to compare waves as the left side of the monitor's graph becomes distorted to accomodate the peak of the next <span style="color: #c7a728">QRS complex</span>.
+
 
 ## <span style="color: #f33e62 ">Reflection</span> 
 Overall, I'm very pleased with these results. Two weeks ago I had no clue if I could even get any of this done. Since then I've research electrical components, learned to solder, and  created code to monitor & display an actual ECG waveform. There is work to be done in refining these voltages possibly through DSP to make them more accurate and reliable. That'll be an upcoming post I'm sure.
