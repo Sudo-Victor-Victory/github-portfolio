@@ -118,15 +118,15 @@ Here's what my soldering resulted in.
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
   <div style="text-align: center; flex: 1 1 300px; max-width: 300px;">
-    <a href="/github-portfolio/images/My_Solder_Station.jpg">
-      <img src="/github-portfolio/images/My_Solder_Station.jpg" alt="My solder job" style="width: 100%; border-radius: 8px;">
+    <a href="/github-portfolio/images/first_time_soldering_blog/My_Solder_Station.jpg">
+      <img src="/github-portfolio/images/first_time_soldering_blog/My_Solder_Station.jpg" alt="My solder job" style="width: 100%; border-radius: 8px;">
       <p style="font-size: 14px;">My solder station</p>
     </a>
   </div>
 
   <div style="text-align: center; flex: 1 1 300px; max-width: 300px;">
-    <a href="/github-portfolio/images/Alt_Solder_angle.jpg">
-      <img src="/github-portfolio/images/Alt_Solder_angle.jpg" alt="Alt solder angle" style="width: 100%; border-radius: 8px;">
+    <a href="/github-portfolio/images/first_time_soldering_blog/Alt_Solder_angle.jpg">
+      <img src="/github-portfolio/images/first_time_soldering_blog/Alt_Solder_angle.jpg" alt="Alt solder angle" style="width: 100%; border-radius: 8px;">
       <p style="font-size: 14px;">Alternate angle with pin headers</p>
     </a>
   </div>
@@ -134,15 +134,15 @@ Here's what my soldering resulted in.
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
   <div style="text-align: center; flex: 1 1 300px; max-width: 300px;">
-    <a href="/github-portfolio/images/Me_With_My_Solder.jpg">
-      <img src="/github-portfolio/images/Me_With_My_Solder.jpg" alt="Me with my solder" style="width: 100%; border-radius: 8px;">
+    <a href="/github-portfolio/images/first_time_soldering_blog/Me_With_My_Solder.jpg">
+      <img src="/github-portfolio/images/first_time_soldering_blog/Me_With_My_Solder.jpg" alt="Me with my solder" style="width: 100%; border-radius: 8px;">
       <p style="font-size: 14px;">Me with my soldered board</p>
     </a>
   </div>
 
   <div style="text-align: center; flex: 1 1 300px; max-width: 300px;">
-    <a href="/github-portfolio/images/My_Solder_Job.jpg">
-      <img src="/github-portfolio/images/My_Solder_Job.jpg" alt="My solder job" style="width: 100%; border-radius: 8px;">
+    <a href="/github-portfolio/images/first_time_soldering_blog/My_Solder_Job.jpg">
+      <img src="/github-portfolio/images/first_time_soldering_blog/My_Solder_Job.jpg" alt="My solder job" style="width: 100%; border-radius: 8px;">
       <p style="font-size: 14px;">My solder job</p>
     </a>
   </div>

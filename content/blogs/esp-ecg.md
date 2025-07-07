@@ -20,8 +20,8 @@ It's almost a trope at this point to have someone in a movie be at their deathbe
 <!--more-->
 
 <div style="text-align: center; max-width: 75%; margin: 0 auto;">
-  <a href="/github-portfolio/images/ECG_example.jpg">
-    <img src="/github-portfolio/images/ECG_example.jpg" alt="My solder job" 
+  <a href="/github-portfolio/images/esp_ecg_blog/ECG_example.jpg">
+    <img src="/github-portfolio/images/esp_ecg_blog/ECG_example.jpg" alt="My solder job" 
          style="display: block; max-width: 100%; height: auto; border-radius: 8px; margin: 0 auto;">
     <p style="font-size: 14px;">An ECG.</p>
   </a>
@@ -36,15 +36,15 @@ The cause of the BEEP and the doctors rushing in is due to the ECG machine monit
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
   <div style="text-align: center; flex: 1 1 300px; max-width: 40%;">
-    <a href="/github-portfolio/images/MAC-5.jpg">
-      <img src="/github-portfolio/images/MAC-5.jpg" alt="My solder job" style="width: 100%; border-radius: 8px;">
+    <a href="/github-portfolio/images/esp_ecg_blog/MAC-5.jpg">
+      <img src="/github-portfolio/images/esp_ecg_blog/MAC-5.jpg" alt="My solder job" style="width: 100%; border-radius: 8px;">
       <p style="font-size: 14px;">A GE MAC-5 ECG machine</p>
     </a>
   </div>
 
   <div style="text-align: center; flex: 1 1 300px; max-width: 33%;">
-    <a href="/github-portfolio/images/Electrode.jpg">
-      <img src="/github-portfolio/images/Electrode.jpg" alt="Alt solder angle" style="width: 100%; border-radius: 8px;">
+    <a href="/github-portfolio/images/esp_ecg_blog/Electrode.jpg">
+      <img src="/github-portfolio/images/esp_ecg_blog/Electrode.jpg" alt="Alt solder angle" style="width: 100%; border-radius: 8px;">
       <p style="font-size: 14px;">A 3M electrode </p>
     </a>
   </div>
@@ -83,7 +83,7 @@ I'm going to save some information for an upcoming blog post relating to my over
 <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
     <div style="text-align: center; max-width: 90%;">
       <a href="https://github.com/Sudo-Victor-Victory/ESP32-ECG/blob/main/ESP_ECG.pdf">
-      <img src="/github-portfolio/images/SparkFun_AD8232_ESP32_Circuit_Design.png" alt="Component diagram showing what GPIO pins connect to what SparkFun AD8232 pins" style="width: 100%; border-radius: 8px;">
+      <img src="/github-portfolio/images/esp_ecg_blog/SparkFun_AD8232_ESP32_Circuit_Design.png" alt="Component diagram showing what GPIO pins connect to what SparkFun AD8232 pins" style="width: 100%; border-radius: 8px;">
       <p style="font-size: 14px;">My Circuit design for the ESP32 + SparkFun AD8232. Tap on the img to go to my github for the full pdf + KiCad project files.</p>
       </a>
     </div>
@@ -92,14 +92,14 @@ I'm going to save some information for an upcoming blog post relating to my over
 </br>
 <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
   <div style="text-align: center; flex: 1 1 300px; max-width: 60%;">
-      <a href="/github-portfolio/images/My_Solder_Job.jpg">
-      <img src="/github-portfolio/images/My_Solder_Job.jpg" alt="Showing the physical connection between the ESP32 and SparkFun AD8232 directly" style="width: 100%; border-radius: 8px;">
+      <a href="/github-portfolio/images/first_time_soldering_blog/My_Solder_Job.jpg">
+      <img src="/github-portfolio/images/first_time_soldering_blog/My_Solder_Job.jpg" alt="Showing the physical connection between the ESP32 and SparkFun AD8232 directly" style="width: 100%; border-radius: 8px;">
       <p style="font-size: 14px;">Asserting that the SparkFun AD8232 can be hooked up to the ESP32 directly.</p>
       </a>
     </div>
     <div style="text-align: center; flex: 1 1 300px; max-width: 46%;">
-      <a href="/github-portfolio/images/Sparkfun_Electrode_hookups.png">
-      <img src="/github-portfolio/images/Sparkfun_Electrode_hookups.png" alt="Recommended electrode placement from the SparkFun website." style="width: 100%; border-radius: 8px;">
+      <a href="/github-portfolio/images/esp_ecg_blog/Sparkfun_Electrode_hookups.png">
+      <img src="/github-portfolio/images/esp_ecg_blog/Sparkfun_Electrode_hookups.png" alt="Recommended electrode placement from the SparkFun website." style="width: 100%; border-radius: 8px;">
       <p style="font-size: 14px;">Recommended electrode placements on the body. In my opinion the right's electrode placements produce more accurate results. </p>
       </a>
     </div>
@@ -109,7 +109,7 @@ I'm going to save some information for an upcoming blog post relating to my over
 
 <div style="text-align: center;">
   <video style="max-width: 100%; " controls>
-    <source src="/github-portfolio/images/ECG_SerialPlotter_Recording.mp4" type="video/mp4">
+    <source src="/github-portfolio/images/esp_ecg_blog/ECG_SerialPlotter_Recording.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
   <p style="font-size: 14px;">My waveform captured by my ESP32's ECG.</p>
@@ -118,14 +118,14 @@ I'm going to save some information for an upcoming blog post relating to my over
 Overall, the results look *alright*. </br> Here's an annotated ECG taken from 33 seconds into the recording. 
 <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
     <div style="text-align: center; flex: 1 1 300px; max-width: 60%;">
-      <a href="/github-portfolio/images/My_annotated_ECG.png">
-      <img src="/github-portfolio/images/My_annotated_ECG.png" alt="My solder job" style="width: 100%; border-radius: 8px;">
+      <a href="/github-portfolio/images/esp_ecg_blog/My_annotated_ECG.png">
+      <img src="/github-portfolio/images/esp_ecg_blog/My_annotated_ECG.png" alt="My solder job" style="width: 100%; border-radius: 8px;">
       <p style="font-size: 14px;">My Annotated ECG with each segment. </p>
       </a>
     </div>
         <div style="text-align: center; flex: 1 1 300px; max-width: 40%;">
       <a href="https://learn.sparkfun.com/tutorials/ad8232-heart-rate-monitor-hookup-guide/all#understanding-the-ecg">
-      <img src="/github-portfolio/images/SparFun_Example_ECG.png" alt="My solder job" style="width: 100%; border-radius: 8px;">
+      <img src="/github-portfolio/images/esp_ecg_blog/SparFun_Example_ECG.png" alt="My solder job" style="width: 100%; border-radius: 8px;">
       <p style="font-size: 14px;">SparkFun's example ECG with annotations. Click the img to be routed there.</p>
       </a>
     </div>

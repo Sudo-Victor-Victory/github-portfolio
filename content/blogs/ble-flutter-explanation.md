@@ -197,7 +197,7 @@ This is the second half of `_connectToDevice` within Explanation 4. Thankfuilly 
 I will make another blog post explaining GATT in more detail, but this image will suffice 
 
 
-![GATT protocol explanation](/github-portfolio/images/GATT_Diagram.svg "Explanation of GATT services between a client and a server")
+![GATT protocol explanation](/github-portfolio/images/ble_flutter_blog/GATT_Diagram.svg "Explanation of GATT services between a client and a server")
 
 GATT is specifically *how*  BLE devices organize and transfer data between one another. The Server/Peripheral has a Service (A group of data) and a Characteristic (A container of data). If you want to read data from a Peripheral - you got to know what Service the data is in, the characteristic its in, and if it has the permissions to be read.
 
