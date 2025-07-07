@@ -4,7 +4,7 @@ draft = false
 title = 'Created an ECG with an ESP32.'
 description = 'Talking about my process to make the ESP32 ECG and upcoming plans'
 author = 'Victor Rodriguez'
-image = '/github-portfolio/images/Patient.webp'
+image = '/github-portfolio/images/esp_ecg_blog/Patient.webp'
 +++
 
 ## <span style="color:#4682B4">You created an ECG???? What is that?</span>
