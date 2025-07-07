@@ -36,7 +36,8 @@
             <img class="img-fluid mx-auto d-block" src="{{ .Params.image }}" alt="{{ .Title }}">
           </div>
           {{ end }}
-          <article class="page-content  p-2">
+          <!-- Added an article ID to only apply highlights to the article content. -->
+          <article id="main-post-content" class="page-content p-2">
           {{ .Content | emojify }}
           </article>
         </div>
@@ -149,7 +150,8 @@
 <script>
     // Executes highlighting after the blog's HTML has been loaded.
     document.addEventListener("DOMContentLoaded", () => {
-    const html = document.body;
+    // Selects the content of the blog post to highlight text on.
+    const html = document.querySelector('#main-post-content');
 
     const highlights = [{
             word: "ESP32",
