@@ -324,4 +324,37 @@
   font-weight: bold; 
   font-size: 17px;
 }
+
+.arduino-blue-highlight {
+    background-color: #00979c; /* Arduino logo's hex color */
+    color: black;
+    font-weight: bold;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+.esp32-red-highlight {
+    background-color: #c62718; /* ESP32 logo's hex color */
+    color: black;
+    font-weight: bold;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+.ad8232-red-highlight {
+    background-color: #e0311d; /* SparkFun logo's hex color */
+    color: black;
+    font-weight: bold;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+.ecg-gold-highlight {
+    background-color: #FFDB58; /* MUSTAARRDDD Yellow */
+    color: black;
+    font-weight: bold;
+    padding: 1px 1px;
+    border-radius: 4px;
+    font-style: italic;
+}
 /* Singlepage scroll progress end */
