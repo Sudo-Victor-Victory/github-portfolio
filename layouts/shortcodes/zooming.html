@@ -1,0 +1,12 @@
+<!--  Added a figure shortcode to group images together -->
+<figure style="margin: 1.5rem auto; text-align: center;">
+  <!-- Adds logic to retrieve params from shortcode {.Get "tag"} 
+    and added a css class "zoomable-img" to be styled in single.css -->
+  <img src="{{ .Get "src" }}" alt="{{ .Get "alt" }}" class="zoomable-img"
+    style="max-width: 100%; height: auto; border-radius: 8px;">
+  {{ with .Get "caption" }}
+    <figcaption style="font-size: 0.9rem; color: #aaa; margin-top: 0.5rem;">
+      {{ . }}
+    </figcaption>
+  {{ end }}
+</figure>
