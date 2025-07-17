@@ -357,4 +357,29 @@
     border-radius: 4px;
     font-style: italic;
 }
+
+/*  Styles the container holding all images  */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; 
+    justify-content: center; 
+}
+
+/*  Styles the image wrapper (Figure) */
+.gallery figure {
+    flex-grow: 1;   /*  Allows imgs to fill space proportionally */
+    flex-shrink: 1; /*  Allows imgs to shrink to fit on 1 line*/
+    flex-basis: 0;  /*  Starts at 0 width to allow resizing to best fit the row*/
+    margin: 0;
+}
+
+/*  Styles the images inside of the figure */
+.gallery img {
+    width: 100%;
+    height: 250px !important;  /*  Used to Have the imgs at a baseline height */
+    object-fit: cover;       /* crop image to fill box */
+    border-radius: 8px;
+    cursor: pointer;
+}
 /* Singlepage scroll progress end */

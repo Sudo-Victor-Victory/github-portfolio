@@ -37,6 +37,22 @@
   <section id="search-content" class="py-2">
     <div class="container" id="search-results"></div>
   </section>
+
+ <!-- Script for image viewer to be loaded in most pages. -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.11.3/viewer.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    new Viewer(document.body, {
+      filter(image) {
+        return image.classList.contains('zoomable-img');
+      },
+      toolbar: true,
+      title: true,
+      zoomable: true,
+      scalable: true,
+    });
+  });
+</script>
 </body>
 
 </html>
