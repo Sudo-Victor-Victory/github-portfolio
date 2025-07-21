@@ -121,9 +121,11 @@ Finally, lets look at this nice graph.
 
 You will notice that Kalman's effects are amazing. It took the still noisy FIR low pass and stabilized it. This is due to using a higher R during the filtering process - which biased more towards the predicted values rather than biasing towards the measured values. This resulted in a pretty steady and noise-reduced waveform. It's BEAUTIFUL 💖
 
-What a better way to truly appreciate the difference by comparing the 2 graphs directly. 
-## No-filter ECG VS FIR+Kalman ECG
-{{< zooming src="/github-portfolio/images/esp_dsp_blog/nofilter_vs_kalman.webp" alt="A combination of FIR and Kalman, with the results being smoooooothhhh." caption="Left is the unfiltered ECG, Right is the FIR+Kalman filtered ECG. ">}}
+I can't think of a better way to see just how good the filtering is - so lets directly compare the unfiltered ECG data straight from the chip with the same data being filtered by FIR+Kalman.
+## Results
+{{< zooming src="/github-portfolio/images/esp_dsp_blog/STILL-no_filter_vs_kalman.webp" alt="Two images comparing my no-filter ECG and the FIR+Kalman ECG while staying still. FIR+Kalman is dramatically smoother" caption="These are taken from the ECG while staying still - left is no filters and right is FIR+Kalman">}}
+
+{{< zooming src="/github-portfolio/images/esp_dsp_blog/MOVING-no_filter_vs_kalman.webp" alt="Two images comparing my no-filter ECG and my FIR+Kalman ECG while moving. FIR+Kalman is smoother " caption="These are taken from the ECG while moving - left is no filters and right is FIR+Kalman">}}
 
 Its wonderful. There's hardly any delay, and the FIR+Kalman combo really smoothed things out. 
 
