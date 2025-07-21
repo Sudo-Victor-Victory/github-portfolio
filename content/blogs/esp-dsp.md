@@ -24,11 +24,11 @@ You 100% have encountered unwanted noise in your life.
 Yup. And I still do. Noise will never be 100% removed. Let alone noise like motion artifacts (electrical signals being picked up/ misinterpreted as heart signals due to muscle contraction). However, I **did** reduce noise in my ECG with:
 
 ## DSP (Digital Signal Processing)
-DSP are mathematical techniques used to transform, analyze, or information from digital representations of analog signals. There's various aspects to these techniques, such as what domains they reside in. Frequency domains represent the number of occurances of each frequency, as opposed to a time domain which shows how the frequency changes over time.
+DSP are mathematical techniques used to transform, analyze, or information from digital representations of analog signals. There's various aspects to these techniques, such as what domains they reside in. Frequency domains represent the number of occurrences of each frequency, as opposed to a time domain which shows how the frequency changes over time.
 
 {{< zooming src="/github-portfolio/images/esp_dsp_blog/ft_v_t.gif" alt="An image showing a frequency domain compared to a time domain" caption="Visual representation of  a frequency domain compared to a time domain" >}}
 
-Notice how Frequency domain only has 3 occurances of an amplitude, compared to time domain shows all signals changing over time.
+Notice how Frequency domain only has 3 occurrences of an amplitude, compared to time domain shows all signals changing over time.
 Okay enough nerding out. </br>
 There are a few powerful and common functions in DSP, such as:
 - Matrix multiplication: reference
@@ -38,18 +38,18 @@ There are a few powerful and common functions in DSP, such as:
 - FIR: reference
 - Vector math operations: reference
 - Kalman filter: reference </br>
-All of which are found in the [Offical ESP32 DSP library (ESP-DSP)](https://github.com/espressif/esp-dsp)
+All of which are found in the [Official ESP32 DSP library (ESP-DSP)](https://github.com/espressif/esp-dsp)
 
 ## What DSP methods did you use?
-I primiarly used *FIR* and *Kalman*. For FIR, I utilized ESP-DSP's implementation. For Kalman, I implemented my own. Both will have their own sections.
+I primarily used *FIR* and *Kalman*. For FIR, I utilized ESP-DSP's implementation. For Kalman, I implemented my own. Both will have their own sections.
 
 ## FIR Filter (Low Pass)
-FIR is simple, powerful, and reliable filter. And I love it. Without going too into the weeds, FIR is essentially a weighted sum. You define a number of taps (or coefficients) which are specially formulated to alter a signal in a predictable fashion (due to a cutoff, and transition bandwidth which defines how much to attenuated/reduce noise) and are summed up to give you a more-concise signal. In human terms, you have a special set of numbers that mathematically change your signal in a predictable manner. In my case, I decided to implement a low-pass filter (ignore high frequencies) for my FIR filter. Here's the reasoning.
-- Reduces high-requency noise: 
+FIR is simple, powerful, and reliable filter. And I love it. Without going too into the weeds, FIR is essentially a weighted sum. You define a number of taps (or coefficients) which are specially formulated to alter a signal in a predictable fashion (due to a cutoff, and transition bandwidth which defines how much to attenuate/reduce noise) and are summed up to give you a more-concise signal. In human terms, you have a special set of numbers that mathematically change your signal in a predictable manner. In my case, I decided to implement a low-pass filter (ignore high frequencies) for my FIR filter. Here's the reasoning.
+- Eliminates high-frequency noise: 
     - Upon researching what frequencies each wave resided in, the highest peak in frequency was the QRS Complex at roughly 40 Hz. Meaning I could ignore higher frequencies, as they stemmed from muscle noise or motion artifacts.
     - Low-pass could cheaply filter these out
-- Preserve waveform morphology (preverse the 'look' of the ECG)
-    - by filtering out higher frequencies, I can still preverse the look of the ECG.
+- Preserve waveform morphology (preserve the 'look' of the ECG)
+    - by filtering out higher frequencies, I can still preserve the look of the ECG.
     - Similarly, you could have a transition bandwidth to modify how much signals are attenuated in proximity to a cutoff. This *also* was huge in removing unwanted jittery noise.
 
 So ultimately it would eliminate higher frequency noise, attenuate lower frequency noise due to the transition bandwidth. I used the website FIIIR.com to generate my FIR coefficients. It will be discussed more in Methodology. 
@@ -80,7 +80,7 @@ I decided to implement my own simple Kalman filter instead of using ESP-DSP's im
 As you can observe, there is a lot of jagged-ness to the ECG waveform. These were captured in a rested state, with no filtering. Staying still looks relatively normal, however when you zoom in or use a smaller time-frame the jagged nature is far more apparent. The image on the right, with movement, looks the worst. With the T wave after :09 looking almost like a complex itself. I needed to filter.
 
 ## Testing Methodology
-I feel my methodology was simple. I would wave my right arm around in a circular motion towards the ceiling for approx. 6 seconds, and take a screenshot. I chose my right arm to be moving as the black wire/electrode is placed on my right pectoral, which would generate electrical signals for the movement. It would also allow my left arm to press the screenshot button.
+I feel my methodology was simple. I would wave my right arm around in a circular motion towards the ceiling for approx. 6 seconds, and take a screenshot. I chose my right arm to be moving as the black wire/electrode is placed on my right pectoral, which would generate electrical signals (muscle contraction) for the movement. It would also allow my left arm to press the screenshot button.
 
 ## FIR Tuning Methodology
 Finding good coefficients - which relied on sampling rate Hz, cutoff frequency Hz, a transition bandwidth Hz, and a window type, was hard. </br>
@@ -90,8 +90,9 @@ Luckily a lot of information relating to it was google-able.
 - The transition bandwidth + cutoff was meant to be approx 40 Hz. So I had a bit of trial and error. 
 - Window type is hamming to reduce rippling effects, decent performance cost, and a moderate sharpness to further reduce noise. 
 
-From there it was a matter of trial and error - visually inspecting the results of the filter while staying still and moving. The selected one will not be here, but in #Results.</br>
-They will all follow the pattern of staying still | moving. 
+From there it was a matter of trial and error - visually inspecting the results of the filter while staying still and while moving. The selected one will not be here, but in #Results.</br>
+The images will follow the pattern of: </br>
+staying still | moving. 
 ### 23 Hz Cutoff , 16 Hz Transition 
 <div class="gallery">
 {{< zooming src="/github-portfolio/images/esp_dsp_blog/23_16_non.png" alt="A screenshot of my ECG - with all parts of the waveform being jittery" caption="Staying still">}}
@@ -108,18 +109,33 @@ They will all follow the pattern of staying still | moving.
 ## Kalman Tuning Methodology
 Kalman was far easier to test, due to only modifying 2 variables instead of modifying an entire list and associated variables. The best part was that I am doing Kalman **after** FIR, so it would make detecting any changes to the signal considerably easier as it'd just amplify the changes. From here it was a matter of trial and error, with the intuition of understanding the Kalman Gain (K)'s relationship with Q and R. 
 
-### 23 Hz Cutoff , 16 Hz Transition 
+### Q: 20.0, R: 10.0 
 {{< zooming src="/github-portfolio/images/esp_dsp_blog/kal_10_20.png" alt="Kalman filter with Q 10, R 20, with little difference" caption="Left is FIR, Right is FIR+Kalman. Very little change. ">}}
 
-### 23 Hz Cutoff , 16 Hz Transition 
+### Q: 10.0, R: 20.0 
 {{< zooming src="/github-portfolio/images/esp_dsp_blog/kal_20_10.png" alt="Kalman filter with Q 10, R 20, with little difference aside from some peaks being too smooth" caption="Left is FIR, Right is FIR+Kalman. For the most part similar, aside from smoothing of some edges.">}}
 
-## Results 
-Finally, lets look at this nice graph.
-{{< zooming src="/github-portfolio/images/esp_dsp_blog/Final_Results.png" alt="A combination of FIR and Kalman, with the results being smoooooothhhh." caption="Left is FIR, Right is FIR+Kalman. Increadibly SMOOTH despite moving. ">}}
+## Chosen Kalman (Q: 2.0, R: 20.0)
+Finally, lets look at this nice graph. 
+{{< zooming src="/github-portfolio/images/esp_dsp_blog/Kalman_Final.png" alt="A combination of FIR and Kalman, with the results being smoooooothhhh." caption="Left is FIR, Right is FIR+Kalman. Incredibly SMOOTH despite moving. ">}}
+
+You will notice that Kalman's effects are amazing. It took the still noisy FIR low pass and stabilized it. This is due to using a higher R during the filtering process - which biased more towards the predicted values rather than biasing towards the measured values. This resulted in a pretty steady and noise-reduced waveform. It's BEAUTIFUL 💖
+
+What a better way to truly appreciate the difference by comparing the 2 graphs directly. 
+## No-filter ECG VS FIR+Kalman ECG
+{{< zooming src="/github-portfolio/images/esp_dsp_blog/nofilter_vs_kalman.webp" alt="A combination of FIR and Kalman, with the results being smoooooothhhh." caption="Left is the unfiltered ECG, Right is the FIR+Kalman filtered ECG. ">}}
+
+Its wonderful. There's hardly any delay, and the FIR+Kalman combo really smoothed things out. 
 
 ## What'd I do better
+I spent quite a bit of time recording results, changing values, and recording more results. If I was developing on a unix-based system I'd have simply made a bash script to automate that process as well (inject env-variables to the script, take a screenshot on a fixed-part of the screen, repeat). That would also resolve my other critique of trying more values. Don't get me wrong - for FIR I tried at least 10 different combinations and for Kalman another 10 different combinations. I'd have liked to increased both numbers. Automating the process would have accomplished that as well.
+
+In terms of quality - I believe I did a great job in filtering. The difference between the unfiltered and FIR+Kalman filter in the previous image is genuinely astounding in how it preserved the morphology better and removed noise. 
 
 ## Summary 
+Reducing noise in a system is hard, especially in an ECG where the preserving morphology/waveform is highly important. Techniques like FIR and Kalman can be minimally intrusive on the morphology of a signal, but needed to be adjusted and tested in large quantities to ensure you are receiving the best results. Best of all it didn't impact the system's performance dramatically
+
+My ECG is cleaner as a result, and it was really fun.
 
 ## Next Steps
+It will be its own blog post. Stay tuned!
