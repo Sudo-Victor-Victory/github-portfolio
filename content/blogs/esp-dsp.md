@@ -63,8 +63,9 @@ In more detail - the two values are
  ---------------- | -----------|  -----------| 
 | Q | Represents how volatile we believe our signal is.| If our signal fluctuates quickly, and that is expected, a high Q is desired. If our signal is steady and smooth, low Q.|  
 | R | Represents how noisy we believe our system is. | A higher R means that we believe our system will intristically have a lot of noise. A lower R means we trust our system to be less noisy.|
+| P ( Error Covariance) | A numerical representation of how off our predicted values are from the measured values. | A small P means we trust our prediction highly, a large P means we doubt it heavily.|
 
-These values direclty modify K - the ***Kalman*** Gain. A higher K means we rely more on the measurement, a lower K means we rely more on the prediction. The equation itself is (Ignore P, its the previous error estimate look up a vid on it)
+These values direclty modify K - the ***Kalman*** Gain. A higher K means we rely more on the measurement, a lower K means we rely more on the prediction. The equation itself is 
 - **K** = (P + Q ) / (P + Q + R )
 So we can reason that a higher Q means we bias towards the measurement more, high R biases more towards the prediction. Mixing them gets you something in between. I discuss how I chose my Q and R in Methodology.
 
