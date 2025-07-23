@@ -1,6 +1,7 @@
 {{ define "head" }}
 <meta name="description" content="{{ .Title }} of {{ .Site.Title }}">
 <link rel="stylesheet" href="{{ `css/list.css` | relURL}}" media="all">
+<link rel="stylesheet" href="{{ `css/global.css` | relURL }}?v={{ now.Unix }}" media="all">
 {{ end }}
 
 {{ define "title" }}
