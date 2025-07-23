@@ -1,0 +1,35 @@
+.cerulean-blue-text {
+    color: #086788; 
+    padding: 1px 1px;
+    border-radius: 4px;
+}
+.blue-green-text {
+    color: #07A0C3;
+    padding: 1px 1px;
+    border-radius: 4px;
+}
+
+.jonquil-yellow-highlight {
+    background-color: #F0C808;
+    color: black;
+    padding: 1px 1px;
+    border-radius: 4px;
+}
+
+.eerie-black-text {
+    color: #1D1B14;
+    padding: 1px 1px;
+    border-radius: 4px;
+}
+
+.red-text {
+    color: #FF0000;
+    padding: 1px 1px;
+    border-radius: 4px;
+}
+
+.green-text {
+    color: 		#F28500;
+    padding: 1px 1px;
+    border-radius: 4px;
+}

@@ -217,14 +217,14 @@
     margin-bottom: 1em;
     padding-left: .5em;
     list-style: none;
-    opacity: 0.9;
+    opacity: 1.0;
 }
 
 #single aside.toc .toc-content ol li a, #single aside.toc .toc-content ul li a {
     font-size: 16px;
     text-decoration: none;
     color: var(--text-link-color) !important;
-    opacity: 0.9;
+    opacity: 1.2;
 }
 
 #single aside.toc .toc-content ol li a:hover, #single aside.toc .toc-content ul li a:hover {
@@ -357,6 +357,10 @@
     border-radius: 4px;
     font-style: italic;
 }
+
+
+
+
 
 /*  Styles the container holding all images  */
 .gallery {
