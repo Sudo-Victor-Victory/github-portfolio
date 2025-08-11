@@ -386,4 +386,32 @@
     border-radius: 8px;
     cursor: pointer;
 }
+
+.video-row {
+  display: flex !important;        /* force flex layout even if theme overrides */
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;                  /* stack vertically on small screens */
+  max-width: 100%;
+}
+
+/* Each video + caption container */
+.video-item {
+  text-align: center;
+  flex: 1 1 45%;                     /* ~half width each, shrink/grow as needed */
+  max-width: 500px;
+}
+
+/* Video element fixes */
+.video-item video {
+  width: 100%;
+  height: auto;
+  display: block;                    /* remove inline whitespace below video */
+}
+
+/* Caption text */
+.video-caption {
+  font-size: 14px;
+  margin-top: 4px;
+}
 /* Singlepage scroll progress end */
