@@ -10,7 +10,7 @@
 }
 
 .jonquil-yellow-highlight {
-    background-color: #F0C808;
+    background-color: #F0C808 !important;
     color: black;
     padding: 1px 1px;
     border-radius: 4px;
@@ -28,8 +28,21 @@
     border-radius: 4px;
 }
 
-.green-text {
+.orange-text {
     color: 		#F28500;
     padding: 1px 1px;
     border-radius: 4px;
+}
+
+.github-card {
+  flex: 1 1 300px;      
+  max-width: 400px;     
+  display: flex;        /* better for stretching evenly */
+}
+
+.github-card img {
+  display: block;
+  height: auto;         /* let height scale naturally */
+  width: 100%;
+  object-fit: contain;  /* no distortion */
 }

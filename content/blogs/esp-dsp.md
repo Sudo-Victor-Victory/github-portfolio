@@ -80,10 +80,10 @@ I decided to implement my own simple Kalman filter instead of using ESP-DSP's im
 
 As you can observe, there is a lot of jagged-ness to the ECG waveform. These were captured in a rested state, with no filtering. Staying still looks relatively normal, however when you zoom in or use a smaller time-frame the jagged nature is far more apparent. The image on the right, with movement, looks the worst. With the T wave after :09 looking almost like a complex itself. I needed to filter.
 
-## <span class="green-text">Testing Methodology </span>  
+## <span class="orange-text">Testing Methodology </span>  
 I feel my methodology was simple. I would wave my right arm around in a circular motion towards the ceiling for approx. 6 seconds, and take a screenshot. I chose my right arm to be moving as the black wire/electrode is placed on my right pectoral, which would generate electrical signals (muscle contraction) for the movement. It would also allow my left arm to press the screenshot button.
 
-## <span class="green-text">FIR Tuning Methodology</span>  
+## <span class="orange-text">FIR Tuning Methodology</span>  
 Finding good coefficients - which relied on sampling rate Hz, cutoff frequency Hz, a transition bandwidth Hz, and a window type, was hard. </br>
 Luckily a lot of information relating to it was google-able. 
 - 250 Hz is a common sampling rate in Holter monitor ECGs, fitness devices, and *some* clinical ECGs. 
@@ -107,7 +107,7 @@ staying still | moving.
 </div>
 
 
-## <span class="green-text">Kalman Tuning Methodology</span> 
+## <span class="orange-text">Kalman Tuning Methodology</span> 
 Kalman was far easier to test, due to only modifying 2 variables instead of modifying an entire list and associated variables. The best part was that I am doing Kalman **after** FIR, so it would make detecting any changes to the signal considerably easier as it'd just amplify the changes. From here it was a matter of trial and error, with the intuition of understanding the Kalman Gain (K)'s relationship with Q and R. 
 
 ### Q: 20.0, R: 10.0 
