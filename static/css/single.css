@@ -386,4 +386,29 @@
     border-radius: 8px;
     cursor: pointer;
 }
+
+.video-row {
+  display: flex !important;      /* override theme */
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;               /* wrap on small screens */
+  max-width: 100%;               /* don't exceed page width */
+  margin: 1rem auto;             /* center in page */
+}
+
+.video-item {
+  text-align: center;
+  flex: 1 1 45%;                  /* take up about half of row each */
+  max-width: 500px;               /* keep width at a reasonable size */
+}
+
+.video-item video {
+  width: 100%;
+  height: 75%;
+}
+
+.video-caption {
+  font-size: 14px;
+  margin-top: 4px;
+}
 /* Singlepage scroll progress end */
