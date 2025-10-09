@@ -65,5 +65,5 @@
 
 .card-img-top[src$=".gif"] {
   height: 215px;
-  object-fit:  contain;
+  object-fit:  scale-down;
 }
