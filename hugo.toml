@@ -63,10 +63,11 @@ animate = true
   [params.hero]
   enable = true
   intro = "Welcome! My name is"
-  title = "Victor Rodriguez."
+  title = "Victor Rodriguez"
   subtitle = " Your Solution Engineer."
   content = "I'm a passionate Software Engineer specializing in Security Solutions, Embedded Programming, and game development. Let's create something amazing together!"
   image = "images/Me_At_Lb.jpg"
+  lottie = "images/spark.json"
 
     [params.hero.bottomImage]
     enable = true
