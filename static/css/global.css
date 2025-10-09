@@ -40,6 +40,12 @@
     border-radius: 4px;
 }
 
+.green-text {
+    color: 		#00ED64;
+    padding: 1px 1px;
+    border-radius: 4px;
+}
+
 .github-card {
   flex: 1 1 300px;      
   max-width: 400px;     

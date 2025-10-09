@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.Language.Lang }}">
-
 <head>
+  <link rel="stylesheet" href="{{ `css/global.css` | relURL }}?v={{ now.Unix }}" media="all">
   {{- partial "head.html" . -}}
   {{- block "head" . }} {{- end }}
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
