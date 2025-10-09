@@ -198,7 +198,7 @@ Extracurricular Activities
     [[params.projects.items]]
     title = "Real-Time BLE ECG mobile app"
     content = "A mobile application that receives ECG data over BLE from a peripheral, visualizes it in real time, saves the data to cloud, and lets the user replay previous ECG recording sessions."
-    image = "projects/Untilted.png"
+    image = "images/Intro_RealTime.gif"
     badges = [ "Flutter", "BLE", "Real-time data visualization", "Cloud Database", "Auth","Dart" ]
 
       [params.projects.items.featured]
