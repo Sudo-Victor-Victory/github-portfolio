@@ -7,7 +7,18 @@
                     {{ .Site.Params.hero.intro }}
                 </span>
                 <h1>
-                    {{ .Site.Params.hero.title }}
+                    <div class="hero-title-wrapper position-relative d-inline-block">
+                    <h1 class="d-inline-block m-0">{{ .Site.Params.hero.title }}</h1>
+
+                    <lottie-player
+                        src="{{ .Site.Params.hero.lottie }}"
+                        background="transparent"
+                        speed="1"
+                        class="hero-lottie"
+                        loop
+                        autoplay>
+                    </lottie-player>
+                    </div>              
                 </h1>
                 <h2>
                     {{ .Site.Params.hero.subtitle }}
