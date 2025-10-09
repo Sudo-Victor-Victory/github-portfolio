@@ -195,9 +195,37 @@ Extracurricular Activities
 
   [params.projects]
   enable = true
+    [[params.projects.items]]
+    title = "Real-Time BLE ECG mobile app"
+    content = "A mobile application that receives ECG data over BLE from a peripheral, visualizes it in real time, saves the data to cloud, and lets the user replay previous ECG recording sessions."
+    image = "projects/Untilted.png"
+    badges = [ "Flutter", "BLE", "Real-time data visualization", "Cloud Database", "Auth","Dart" ]
+
+      [params.projects.items.featured]
+      name = "Demo"
+      link = "https://github.com/Sudo-Victor-Victory/ecg_app"
+
+      [[params.projects.items.links]]
+      icon = "fab fa-github"
+      url = "https://github.com/Sudo-Victor-Victory/ecg_app"
+
 
     [[params.projects.items]]
-    title = "Untitled Roguelike"
+    title = "Real-time Embedded ECG and BLE Server"
+    content = "Firmware for an ESP32 that gathers, filters, and transmits ECG data over Bluetooth Low Energy (BLE), using a SparkFun Ad8232, Digital Signal Processing (DSP) techniques like FIR and Kalman to clean the signal, and FreeRTOS for consistent real-time performance."
+    image = "projects/Untilted.png"
+    badges = [ "ESP32", "Embedded Systems", "RTOS", "ECG", "BLE", "GATT", "C++", "Soldering"]
+
+      [params.projects.items.featured]
+      name = "Demo"
+      link = "https://github.com/Sudo-Victor-Victory/ESP32-ECG"
+
+      [[params.projects.items.links]]
+      icon = "fab fa-github"
+      url = "https://github.com/Sudo-Victor-Victory/ESP32-ECG"
+
+    [[params.projects.items]]
+    title = "Untitled Roguelike [On Pause]"
     content = "A 3rd person cooperative Roguelike game where each character has unique abilities Made in GODOT."
     image = "projects/Untilted.png"
     badges = [ "Godot", "Game Programming", "GDScript" ]
@@ -210,9 +238,6 @@ Extracurricular Activities
       icon = "fab fa-github"
       url = "https://www.github.com/Sudo-Victor-Victory/3rdperson_rogue"
 
-      [[params.projects.items.links]]
-      icon = "fab fa-twitter"
-      url = "https://twitter.com/intent/tweet?text=Check+it+out:&url=https://github.com/Sudo-Victor-Victory/3rdperson_roguee"
 
     [[params.projects.items]]
     title = "Arduino Learning"
