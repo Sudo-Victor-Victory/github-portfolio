@@ -3,7 +3,11 @@
 {{ if .Site.Params.experience.enable | default false }}
 <section id="experience" class="py-5">
     <div class="container">
-        <h1 class="text-center bg-transparent jonquil-yellow-highlight">{{ .Site.Params.experience.title | default "Experience" }}</h1>
+        <h1 class="text-center bg-transparent">
+            <span class="gold-highlight">
+                {{ .Site.Params.experience.title | default "Experience" }}
+            </span>
+        </h1>
         <div class="row justify-content-center">
             <div class="col-sm-12 col-md-8 col-lg-8 py-5">
                 <div class="experience-container px-3 pt-2">
