@@ -204,7 +204,7 @@ Extracurricular Activities
 
       [params.projects.items.featured]
       name = "Demo"
-      link = "https://github.com/Sudo-Victor-Victory/ecg_app"
+      link = "/github-portfolio/blogs/ble-app-demo/#it-is-time-time-to-demo"
 
       [[params.projects.items.links]]
       icon = "fab fa-github"
@@ -214,7 +214,7 @@ Extracurricular Activities
     [[params.projects.items]]
     title = "Real-time Embedded ECG and BLE Server"
     content = "Firmware for an ESP32 that gathers, filters, and transmits ECG data over Bluetooth Low Energy (BLE), using a SparkFun Ad8232, Digital Signal Processing (DSP) techniques like FIR and Kalman to clean the signal, and FreeRTOS for consistent real-time performance."
-    image = "projects/Untilted.png"
+    image = "images/Teleplot_DSP.gif"
     badges = [ "ESP32", "Embedded Systems", "RTOS", "ECG", "BLE", "GATT", "C++", "Soldering"]
 
       [params.projects.items.featured]
