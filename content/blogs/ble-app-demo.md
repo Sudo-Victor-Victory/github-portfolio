@@ -47,6 +47,13 @@ I created a video fully showcasing my application. Please enjoy.
 {{< youtube ULPSuycPSoY >}}
 
 </div>
+</br>
+
+## <span class="jonquil-yellow-highlight "> Workflow Diagram </span>
+Here is a practical visual explanation of how my system works. Tap on the image to view it and zoom in.
+
+{{<  zooming src="/github-portfolio/images/ble_app_demo_blog/ESP32_To_Flutter.png" alt= "An image showing the connections between my SparkFun AD8232, ESP32, Cores running RTOS functions, BLE, mobile phone, mobile app, supabase, and its databases." caption="Visualizing everything really makes you appreciate how I got 2 different systems completely dependent on one another to function nicely." >}}
+
 
 ## <span class="blue-green-text"> Repositories for each system </span>
 <a class="github-card" href="https://github.com/Sudo-Victor-Victory/ESP32-ECG" target="_blank">
@@ -58,4 +65,12 @@ I created a video fully showcasing my application. Please enjoy.
 </a>
 
 ## What's next
-I will most likely keep working on these repositories since there are little enhancements I can perform. No matter what state something is in -  <span class="ecg-gold-highlight"> It can always improve </span>. Thank you for joining me on this journey.
+I will most likely keep working on these repositories since there are little enhancements I can implement. No matter what state something is in -  <span class="ecg-gold-highlight"> It can always improve </span>. Just like my skills over the span of these few months, I have created
+- A website
+- An ECG circuit
+- Real-time charting app
+- Supabase schemas for real-time operations
+- Utilized bluetooth GATT architecture to transmit batched data for real time consistenty.
+
+Just like I have learned and improve - **you can too**. Never stop learning.
+
