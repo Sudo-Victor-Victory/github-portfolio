@@ -1,46 +1,68 @@
 {{ define "head" }}
 <meta name="description" content="{{ .Title }} of {{ .Site.Title }}">
-<!-- <link rel="stylesheet" href="{{ .Site.Params.staticPath }}/css/list.css" media="all"> -->
 {{ if .Params.viewer | default true }}
-<link rel="stylesheet" href="../css/gallery.css">
+<link rel="stylesheet" href="{{ `css/gallery.css` | relURL }}?v={{ now.Unix }}" media="all">
 <link rel="stylesheet" href="../viewer/viewer.min.css">
 <script src="../viewer/viewer.min.js"></script>
 {{ end }}
-
 {{ end }}
 
 {{ define "title" }}
-{{.Title }} | {{ .Site.Title }}
+{{ .Title }} | {{ .Site.Title }}
 {{ end }}
 
 {{ define "main" }}
 <div class="container pt-5" id="list-page">
-    <h2 class="text-center pb-2">{{.Title}}</h2>
-    <h6 class="text-center">{{ .Params.description | emojify }}</h6>
-    <div class="row p-4">
-        {{ .Content | emojify }}
-    </div>
-    <div class="card-group p-4">
-        <div class="row justify-content-center">
-            {{ range .Params.galleryImages }}
-            <div class="col-md-4 p-0 m-0">
-                <div class="card p-0 m-0 border-0">
-                    <img class="w-100 {{if .Params.viewer | default true}}viewer-enabled-image{{end}}" height="280px" src="{{ .src }}">
-                </div>
-            </div>
+  <h2 class="text-center pb-2">{{ .Title }}</h2>
+  <h6 class="text-center">{{ .Params.description | emojify }}</h6>
+
+  <div class="card-group p-4">
+    <div class="row justify-content-center">
+      {{ range .Params.galleryImages }}
+        <div class="col-md-4 p-0 m-0">
+          <div class="card p-0 m-0 border-0 text-center">
+
+            {{/* Show images vs videos differently */}}
+            {{ if (or 
+              (strings.HasSuffix .src ".png") 
+              (strings.HasSuffix .src ".jpg") 
+              (strings.HasSuffix .src ".jpeg") 
+              (strings.HasSuffix .src ".gif") 
+              (strings.HasSuffix .src ".webp")) 
+            }}
+              <img class="w-100 viewer-enabled-image" height="280px" 
+                   src="{{ .src }}" alt="{{ .caption }}">
+            {{ else if (strings.HasSuffix .src ".mp4") }}
+              <video controls class="w-100" height="280px" style="border-radius: 8px;">
+                <source src="{{ .src }}" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
             {{ end }}
+
+            {{ with .caption }}
+              <div class="p-2" style="font-size: 0.9rem; color: #07A0C3;">{{ . }}</div>
+            {{ end }}
+
+          </div>
         </div>
+      {{ end }}
     </div>
+  </div>
 </div>
+  <div class="row p-4">
+    {{ .Content | emojify }}
+  </div>
 
 {{ if .Params.viewer | default true }}
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var viewer = new Viewer(document.getElementById('list-page'), {
-            ...{{ .Params.viewerOptions }}
-        });
+  document.addEventListener('DOMContentLoaded', function() {
+    var viewer = new Viewer(document.getElementById('list-page'), {
+      ...{{ .Params.viewerOptions }},
+      title: function(image) {
+        return image.alt || image.getAttribute('data-original-title') || '';
+      }
     });
+  });
 </script>
 {{ end }}
-
 {{ end }}

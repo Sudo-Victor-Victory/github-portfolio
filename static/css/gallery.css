@@ -1,0 +1,36 @@
+.gallery-video {
+  max-width: 600px;
+  margin: 2rem auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+.gallery-video iframe {
+  width: 100%;
+  height: 200px;
+  border: none;
+  display: block;
+}
+
+/* Style the caption text inside Viewer.js lightbox */
+.viewer-title {
+  color: #07A0C3 !important;      /* make the text bright and visible */
+  font-size: 1.1rem !important;   /* slightly larger font */
+  font-weight: 600;               /* make it bold */
+  background: rgba(0, 0, 0, 0.6); /* add a dark translucent background */
+  padding: 6px 10px;              /* add some spacing */
+  border-radius: 6px;             /* rounded corners */
+  bottom: 15px !important;        /* raise it a bit from the bottom */
+  left: 15px !important;          /* add padding from left */
+}
+
+body, html {
+  overflow-x: hidden;
+}
+
+/* Prevents Bootstrap rows from extending outside the container */
+.row {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
