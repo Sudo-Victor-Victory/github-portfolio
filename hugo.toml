@@ -89,7 +89,7 @@ url  = "https://www.linkedin.com/in/victor-rodriguez-vr/"
   [params.about]
   enable = true
   title = "About Me"
-  image = "images/Nice_image.png"
+  image = "images/Victor_Headshot.JPG"
   content = """
 I am a dedicated Software Engineer with a passion for helping others through technology. With a Bachelor of Science in Computer Science, I explore the fascinating intersection of technology and art. Currently, I'm working on various exciting projects while seeking new job opportunities."""
 
