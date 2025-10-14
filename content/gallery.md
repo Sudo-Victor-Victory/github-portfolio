@@ -44,8 +44,8 @@ galleryImages:
  - src: ../images/first_time_soldering_blog/Alt_Solder_angle.jpg
    caption: "Side view of my first solder job adding male pin headers"
 
- - src: ../images/first_time_soldering_blog/Me_With_My_solder.jpg
-   caption: "Flowchart of my Finite State machine for player movement"
+ - src: ../images/first_time_soldering_blog/Me_With_My_Solder.jpg
+   caption: "Picture of me after I successfuly soldered male pin headers on a SparkFun AD8232"
 
  - src: ../gallery_images/Player_Movement_State_Machine_Flowchart-1.png
    caption: "Flowchart of my Finite State machine for player movement"
